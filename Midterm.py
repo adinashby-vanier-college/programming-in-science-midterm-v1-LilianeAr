@@ -9,24 +9,23 @@ print(area_of_circle(5))
 
 # Q2: Hollow Right Triangle
 def hollow_right_triangle(n):
-    return ""
-
-# Q2: Hollow Right Triangle
-def hollow_right_triangle(n):
     result = ""
 
     for i in range(n):
         for j in range(n):
+            if n < 4:
+                return "The triangle height should be at least 4."
             if i == n - 1 or j == 0 or j == i:
                 result += "*"
             else:
                 result += " "
         result += "\n"
-
     return result.rstrip()
-print(hollow_right_triangle(3))
+print(hollow_right_triangle(1))
 print(hollow_right_triangle(4))
 print(hollow_right_triangle(5))
+
+
 
 
 # Q3: Inverted Pyramid
